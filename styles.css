@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "roboto";
+    background-color: #bbc6fa;
+    overflow: scroll;
+}
+
+
+.quote-boks{
+    background-color: #fff;
+    max-width: 600px; 
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    margin: 10% auto;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0,0.15);
+    position: relative;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.quote-boks h2{
+    font-size: 30px;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.quote-boks h2::after{
+    content: "";
+    width: 70px;
+    height: 3px;
+    border-radius: 2px;
+    position: absolute;
+    background-color: rgb(82, 196, 234);
+    top: 45px;
+    left: 45%;
+}
+
+#quote{
+    font-size: 20px;
+    padding: 40px 0px;
+    font-weight: 500;
+    color: rgba(0, 0, 0,0.5);
+    position: relative;
+
+}
+
+#quote::before, #quote::after{
+    content: '"';
+}
+
+#author{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px ; 
+    font-weight: 700;  
+}
+
+#author::before{
+    content: " ";
+    width: 20px;
+    height: 3px;
+    position: relative;
+    background-color: rgb(82, 196, 234);
+    top: 10px;
+    margin-right: 10px;
+}
+
+.buttons{
+    display: block;
+    margin-top: 40px;
+}
+
+
+button{
+
+    width: 30%;
+    margin-top: 10px;
+    padding: 15px 10px;
+    border-radius: 25px;
+    border: 0;
+    color: white;
+    font-weight: 800;
+    outline: 0;
+    margin-right: 10px;
+}
+.btn, .next-btn{
+    background-color: rgb(82, 196, 234);
+}
+
+.btn:active{
+    background-color: transparent;
+}
+
+#tweet-btn{
+    border: 1px solid rgb(82, 196, 234);
+}
+
+#tweet-btn:active{
+    background-color: rgb(82, 196, 234);
+}
+
+.category{
+    color: rgba(12, 117, 151,0.7);
+    font-weight: 800;
+}
+
+@media (max-width: 450px) {
+    button{
+        width: 30%;
+        margin-top: 10px;
+        padding: 14px 10px;
+        border-radius: 25px;
+        border: 0;
+        color: white;
+        font-weight: 400;
+        font-size: 15px;
+        outline: 0;
+        /* margin-right: 10px; */
+    }
+
+    .quote-boks{
+        padding: 10px;
+    }
+  }
+@media (max-width: 345px) {
+    button{
+        width: 35%;
+    }
+
+    .quote-boks{
+        padding: 10px;
+    }
+  }
