@@ -30,15 +30,28 @@ function randomQuote(){
 }
 
 //Here, this function displays the quote according to the category selected
-function categorizedQuotes(e){
-    if(e.target.classList.contains('btn')){
-        let quoteId = e.target.dataset.id
-        let selectedQ = quotes[quoteId][randomNum()]
-        quoteContent.textContent = selectedQ.content
-        author.textContent = selectedQ.author 
-        category.textContent = selectedQ.category + " quote"
+
+let count = 0;
+function categorizedQuotes(e) {
+    if(e.target.classList.contains('btn')) {
+        let quoteId = e.target.dataset.id;
+
+        
+        if (count >= quotes[quoteId].length) {
+            count = 0;
+        }
+
+        let selectedQ = quotes[quoteId][count];
+
+        quoteContent.textContent = selectedQ.content;
+        author.textContent = selectedQ.author;
+        category.textContent = selectedQ.category + " quote";
+
+        count++;
     }
 }
+    
+
 //Invokation of functions
 randomQuote()
 eventListener()
