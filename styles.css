@@ -99,7 +99,7 @@ button{
     background-color: rgb(82, 196, 234);
 }
 
-.btn:active{
+.btn:active, .next-btn:active{
     background-color: transparent;
 }
 
@@ -116,9 +116,7 @@ button{
     font-weight: 800;
 }
 
-.selected-dim{
-     background-color: #000080;
-}
+
 
 @media (max-width: 450px) {
     button{
