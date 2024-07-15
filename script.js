@@ -6,18 +6,14 @@ let author = document.querySelector("#author");
 let category = document.querySelector(".category");
 let nextBtn = document.querySelector(".next-btn");
 let buttons = document.querySelector(".buttons");
+let bodycontent = document.querySelector(".body")
 
 
 
 function eventListener(){
-    nextBtn.addEventListener("click", ()=>{
-        randomQuote()
-        currentTarget.classList.add("selected-btn"})
-                             
-    
+    nextBtn.addEventListener("click", randomQuote)
     buttons.addEventListener("click", (e)=>{
         categorizedQuotes(e)
-        currentTarget.classList.add("selected-btn")
     })
 }
 //Generation of random number
@@ -53,9 +49,13 @@ function categorizedQuotes(e) {
         category.textContent = selectedQ.category + " quote";
 
         count++;
+        
     }
 }
     
+
+
+
 
 //Invokation of functions
 randomQuote()
