@@ -116,6 +116,10 @@ button{
     font-weight: 800;
 }
 
+.selected-dim{
+     background-color: #000080;
+}
+
 @media (max-width: 450px) {
     button{
         width: 30%;
