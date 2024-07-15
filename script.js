@@ -10,9 +10,13 @@ let buttons = document.querySelector(".buttons");
 
 
 function eventListener(){
-    nextBtn.addEventListener("click", randomQuote)
+    nextBtn.addEventListener("click", ()=>{
+        randomQuote()
+        currentTarget.classList.add("selected-btn")
+    }
     buttons.addEventListener("click", (e)=>{
         categorizedQuotes(e)
+        currentTarget.classList.add("selected-btn")
     })
 }
 //Generation of random number
